@@ -1,0 +1,23 @@
+@(form: Form[forms.SiteForm.Data], postUrl: Call)(implicit assetsFinder: AssetsFinder, request: MessagesRequestHeader)
+
+<html lang="ru"><head>
+    <title>Визуализация зависимостей сайтов</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="HTML5BOOK">
+    <link rel="stylesheet" type="text/css" href="@assetsFinder.path("stylesheets/button.css")">
+</head>
+    <body>
+        <div class="container">
+            @helper.form(postUrl, 'class -> "transparent") {
+                <div class="form-inner">
+                    @helper.CSRF.formField
+
+                    @helper.inputText(form("Web address"))
+                </div>
+
+                <button class="button">Show dependencies</button>
+            }
+        </div>
+    </body>
+</html>
