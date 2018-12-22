@@ -10,11 +10,14 @@ body {
     margin: 0 auto;
 }
 
+
 .button {
+    float: left;
+    margin-left: 12px;
+    margin-right: auto;
     display: inline-block;
-    margin: 10px 15px 15px;
-    padding: 13px 20px;
-    font-size: 18px;
+    padding: 12px 44px;
+    font-size: 16px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -44,7 +47,7 @@ body {
     text-transform: uppercase;
 }
 .form-inner h3:after {
-    content: "";
+    content: "123123";
     position :absolute;
     left: 0;
     bottom: -6px;
@@ -54,7 +57,7 @@ body {
 }
 .form-inner label {
     display: block;
-    padding-left: 15px;
+    padding-left: 25px;
     font-family: 'Roboto', sans-serif;
     color: rgba(255,255,255,.6);
     text-transform: uppercase;
@@ -84,4 +87,20 @@ body {
     max-width: 800px;
     padding: 60px 50px;
     margin: 50px auto 0;
+}
+
+#Web\ address_field {
+    width: 400px;
+    float: left;
+}
+#Graph\ depth_field {
+    width: 150px;
+    float: left;
+}
+
+#error {
+    width: 400px;
+    float: left;
+    color: #cc0000;
+    padding-top: 12px;
 }

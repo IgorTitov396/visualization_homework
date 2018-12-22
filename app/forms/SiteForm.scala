@@ -10,7 +10,7 @@ object SiteForm {
    * Using a class specifically for form binding reduces the chances
    * of a parameter tampering attack and makes code clearer.
    */
-  case class Data(webAddress: String)
+  case class Data(webAddress: String, graphDepth: String)
 
   /**
    * The form definition for the "create a widget" form.
@@ -19,7 +19,8 @@ object SiteForm {
    */
   val form = Form(
     mapping(
-      "Web address" -> text
+      "Web address" -> text,
+      "Graph depth" -> text
     )(Data.apply)(Data.unapply)
   )
 }
