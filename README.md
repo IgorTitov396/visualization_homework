@@ -1,7 +1,6 @@
 # Visualization of site dependencies
 
-[travis-url]: https://travis-ci.org/IgorTitov396/visualization_homework
-[travis-badge]: https://travis-ci.org/IgorTitov396/visualization_homework
+[![Build Status](https://travis-ci.com/IgorTitov396/visualization_homework.png)](https://travis-ci.org/IgorTitov396/visualization_homework)
 
 This program visualizes web page dependencies and draws a graph of these dependencies. This visualization can help when searching for plagiarism. For security reasons, the site’s functionality is limited to accessible domains.
 
