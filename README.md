@@ -7,7 +7,7 @@ This program visualizes web page dependencies and draws a graph of these depende
 
 ## Restrictions:
 
-Allowed domain list: `[ ".wikipedia.org"]`
+Allowed domain list: `[ ".wikipedia.org"]`<br>
 Max graph depth size: `3`
 
 
