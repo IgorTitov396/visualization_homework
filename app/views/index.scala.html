@@ -14,9 +14,9 @@
             <div class="form-inner">
                 @helper.CSRF.formField
 
-                @helper.inputText(form("Web address"))
+                @helper.inputText(form("Link to wikipedia article"))
                 @helper.inputText(form("Graph depth"))
-                @if(!error.isEmpty) {
+                @if(error.isEmpty) {
                     <label id="error"></label>
                 } else {
                     <label id="error">Error: @error</label>

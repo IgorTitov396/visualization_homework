@@ -19,7 +19,7 @@ object SiteForm {
    */
   val form = Form(
     mapping(
-      "Web address" -> text,
+      "Link to wikipedia article" -> text,
       "Graph depth" -> text
     )(Data.apply)(Data.unapply)
   )

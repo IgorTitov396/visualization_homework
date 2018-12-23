@@ -1,4 +1,4 @@
-width = 932;
+width = 1500;
 
 tree = data => {
     const root = d3.hierarchy(data);
@@ -65,6 +65,18 @@ node.append("text")
 
 svg.node();
 
+node.style("cursor", "pointer")
+    .on("click", clicked);
+
+function clicked(p) {
+    httpGet(p.data.link)
+}
+
+function httpGet(theUrl)
+{
+    window.location = theUrl;
+}
+
 getHeight = () => {
     const points = g.node().children[1].children;
     let maxY = Number.MIN_SAFE_INTEGER;
@@ -76,15 +88,4 @@ getHeight = () => {
     }
     return (maxY - minY) + 50
 };
-getWidth = () => {
-    const points = g.node().children[1].children;
-    let maxX = Number.MIN_SAFE_INTEGER;
-    let minX = Number.MAX_SAFE_INTEGER;
-    for (point of points) {
-        const pointX = parseInt(point.getAttribute("transform").replace(/[^\d,.]/g, '').split(",")[0]);
-        if (pointX > maxY) maxY = pointX;
-        if (pointX < minY) minY = pointX;
-    }
-    return (maxY - minY) + 20
-};
-svg.style("height", getHeight() * 1.5);
+svg.style("height", getHeight() * 2);
